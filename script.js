@@ -295,3 +295,33 @@ function randomNum(max, min) {
     return Math.floor(Math.random() *(max - min) + min);
 }
 
+// CHARACTERS BUILD // 
+// Here I am going to build characters UI 
+function population(container,characters) {
+    // To show images
+    let facing = 'front';
+    if(characters === 'hero'){
+        // Here it would show the back & front of the pokemon 
+        facing = 'back';
+    }
+    // Building the pokemon
+    container.append('<section class="char"><img src="'+gameData[character].img[facing]+'" alt="'+gameData[character].name+'"><aside class="data"><h2>'+gameData[character].name+'</h2><div><progress max="'+gameData[character].hp.total+'"></progress><p><span>'+gameData[character].hp.current+'</span>/'+gameData[character].hp.total+'</p></div></aside></section>');
+}
+
+// ATTACK MULTIPLER //
+// This would modify the attack value for weaknesses & strengths
+ function attackMultiplier(attacker, curAttack) {
+   let defender = 'enemy';
+   if(attacker == 'enemy'){
+     defender == 'hero';
+   }
+   if(gameData[defender].weakness.indexOf(gameData[attacker].type) >= 0){
+     currentAttack.hp *= 2; // Weakness 
+   }
+   if(gameData[defender].resistance.indexOf(gameData[attacker].type) >= 0){
+     currentAttack.hp *= 2; // Resistance 
+   }
+   currentAttack.hp = Math.max(currentAttack.hp);
+   return currentAttack.hp;
+ }
+ 
