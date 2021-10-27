@@ -295,7 +295,7 @@ function randomNum(max, min) {
     return Math.floor(Math.random() *(max - min) + min);
 }
 
-// CHARACTERS BUILD // 
+// POKEMON BUILD // 
 // Here I am going to build characters UI 
 function population(container,characters) {
     // To show images
@@ -326,10 +326,76 @@ function population(container,characters) {
  }
 
  // HP BAR //
+
 function setHp(){
   // Showing the stop health bar and its set value
   clearInterval(defendProgressInt);
   clearInterval(progressInt);
   $('.stadium .enemy progress').val(gameData.enemy.hp.current);
   $('.stadium .hero progress').val(gameData.enemy.hero.hp.current);
+}
+
+// POKEMON CHOICE // 
+function characterChoice(){
+  // picking which pokemon you want in battle
+  $('.characters .char-container').click(function(){ 
+    // the chosen pokemon name
+    let name = $(this).children('h2').text()
+    toLowerCase();
+    // to be able to switch the current step in the game
+    switch(gameData.step){
+    
+      case 1: 
+        for(let i in characters){
+          if(character[i].name === name){
+            gameData.hero = character[i];
+          }
+        }
+        let char = $(this).remove();
+        populateChar($('.stadium .hero'),
+        'hero');
+
+        for(let i in gameData.hero.attacks){
+          $('.attack-list').append('<li><p class="attack-name"><strong>'+gameData.hero.attacks[i].name+'</strong></p><p class="attack-count"><small><span>'+gameData.hero.attacks[i].avail.remaining+'</span>/'+gameData.hero.attacks[i].avail.total+'</small></p></li>');
+        }
+        $('.attack-list').addClass('disabled');
+        // updates the instructions
+        $('.instruction p').text('Choose your enemy!');
+        // setting the health bar value
+        $('stadium .hero progress').val(gameData.hero.hp.current);
+        // pokemon roar
+        playSound(name);
+        // moving on selecting opponent
+        gameData.step = 2;
+        break;
+
+      case 2:
+        // selecting opponent to fight against
+        for(let i in characters){
+          if(characters[i].name === name){
+          // to be able to find and save the opponent data
+            gameData.enemy = characters[i];
+          }
+        }
+        // removing the opponent from the list
+        let char = $(this).remove();
+        // building the opponent
+        populateChar($('.stadium .enemy'), 'enemy');
+        $('.stadium .enemy').css({'padding': '25px 0'});
+        // updating the instructions
+        $('.instructions p').text('Fight!!!');
+        // hiding the pokemon list 
+        $('.characters').children().slideUp('500', function(){
+          $('.characters').addClass('hidden');
+        });
+        // update opponent health bar 
+        $('.stadium .enemy progress').val(gameData.enemy.hp.current);
+        // opponent whimpers in fear
+        playSound(name);
+        // update steps to attack phase and bidding click events 
+        gameData.step = 3;
+        attackList();
+        break;
+    }
+  });
 }
