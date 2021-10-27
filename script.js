@@ -324,4 +324,12 @@ function population(container,characters) {
    currentAttack.hp = Math.max(currentAttack.hp);
    return currentAttack.hp;
  }
- 
+
+ // HP BAR //
+function setHp(){
+  // Showing the stop health bar and its set value
+  clearInterval(defendProgressInt);
+  clearInterval(progressInt);
+  $('.stadium .enemy progress').val(gameData.enemy.hp.current);
+  $('.stadium .hero progress').val(gameData.enemy.hero.hp.current);
+}
