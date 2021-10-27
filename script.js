@@ -291,4 +291,7 @@ function randomNum(max, min) {
     if(min === undefined || min === '' || min === null) {
         // default value
     }
+    // Random Number !!! 
+    return Math.floor(Math.random() *(max - min) + min);
 }
+
