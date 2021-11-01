@@ -58,7 +58,7 @@ function buildVars(){
       weakness: ['fighting'],
       resistance: ['steel'],
       img: {
-        default: "http://vignette2.wikia.nocookie.net/all-anime-characters/images/7/7b/Cute_pikachu_with_hat_by_mlpochea-d63xlom.png/revision/latest?cb=20150108111832",
+        default: "https://freepngimg.com/thumb/pokemon/37470-6-pikachu-transparent-background-thumb.png",
         front: "http://rs1263.pbsrc.com/albums/ii631/Pokemon-Vampire-Knight-lover/pikachu_.gif~c200",
         back: "http://vignette4.wikia.nocookie.net/pokemon/images/5/5b/Pikachu_Back_XY.gif/revision/latest?cb=20141009080948"
       },
@@ -107,7 +107,7 @@ function buildVars(){
       weakness: ['water'],
       resistance: ['grass'],
       img: {
-        default: "http://img3.wikia.nocookie.net/__cb20150330015216/pokemon/images/f/f5/004Charmander_Pokemon_Mystery_Dungeon_Explorers_of_Sky.png",
+        default: "https://freepngimg.com/thumb/pokemon/37543-2-pokemon-picture-thumb.png",
         front: "http://rs772.pbsrc.com/albums/yy9/HybridRainbow88/Charmander.gif~c200",
         back: "http://vignette1.wikia.nocookie.net/pokemon/images/2/23/Charmander_Back_XY.gif/revision/latest?cb=20141009063457"
       },
@@ -156,7 +156,7 @@ function buildVars(){
       weakness: ['electric','grass'],
       resistance: ['normal','fire'],
       img: {
-        default: "http://vignette3.wikia.nocookie.net/ssbb/images/7/79/Squirtle_Rojo_Fuego_y_Verde_Hoja.png/revision/latest?cb=20130907041944&path-prefix=es",
+        default: "https://freepngimg.com/thumb/pokemon/11-2-pokemon-png-thumb.png",
         front: "https://66.media.tumblr.com/ddd22fe10a485ed56a46d958c058a970/tumblr_n9lnpepqkW1scncwdo1_500.gif",
         back: "http://vignette3.wikia.nocookie.net/pokemon/images/d/d8/Squirtle_XY_Back_Sprite.gif/revision/latest?cb=20141031154426"
       },
@@ -205,7 +205,7 @@ function buildVars(){
       weakness: ['fire'],
       resistance: ['water','psychic'],
       img: {
-        default: "http://vignette4.wikia.nocookie.net/pokemon/images/8/81/001Bulbasaur_Pokemon_Mystery_Dungeon_Explorers_of_Sky.png/revision/latest?cb=20150105223818",
+        default: "https://freepngimg.com/thumb/pokemon/10-2-pokemon-picture-thumb.png",
         front: "https://media.giphy.com/media/iIWW4BM6nNWTu/giphy.gif",
         back: "http://rs425.pbsrc.com/albums/pp335/Grasaldrea/ShinyBulbasauranimatedback.gif~c200",
         deranged: "http://rs522.pbsrc.com/albums/w348/Richtoon18/b3617568f13aa750c57eacc45d0b2da7.gif~c200",
