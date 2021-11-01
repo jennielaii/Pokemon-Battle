@@ -396,7 +396,7 @@ function resetGame(){
   $('.attack-list li').unbind('click');
   $('.attack-list').empty();
   $('.stadium .enemy').css({'padding':'0'});
-  $('.instructions p').text('Choose your hero');
+  $('.instructions p').text('Choose Your Pokemon!');
 
   // set & start the opening game music
   $('audio.music').attr('src',music["opening"]);
