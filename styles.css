@@ -140,7 +140,7 @@ strong {
   flex-wrap: wrap;
   background: #FFFAFA;
   position: initial;
-  transtion: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
   text-transform: capitalize;
 }
 .attack-list.disabled {
