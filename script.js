@@ -108,7 +108,7 @@ function buildVars(){
       resistance: ['grass'],
       img: {
         default: "http://img3.wikia.nocookie.net/__cb20150330015216/pokemon/images/f/f5/004Charmander_Pokemon_Mystery_Dungeon_Explorers_of_Sky.png",
-        front: "https://thumbs.gfycat.com/OrganicImperfectHornet-max-1mb.gif",
+        front: "http://rs772.pbsrc.com/albums/yy9/HybridRainbow88/Charmander.gif~c200",
         back: "http://vignette1.wikia.nocookie.net/pokemon/images/2/23/Charmander_Back_XY.gif/revision/latest?cb=20141009063457"
       },
       hp: {
