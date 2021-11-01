@@ -108,7 +108,7 @@ function buildVars(){
       resistance: ['grass'],
       img: {
         default: "http://img3.wikia.nocookie.net/__cb20150330015216/pokemon/images/f/f5/004Charmander_Pokemon_Mystery_Dungeon_Explorers_of_Sky.png",
-        front: "http://rs772.pbsrc.com/albums/yy9/HybridRainbow88/Charmander.gif~c200",
+        front: "https://thumbs.gfycat.com/OrganicImperfectHornet-max-1mb.gif",
         back: "http://vignette1.wikia.nocookie.net/pokemon/images/2/23/Charmander_Back_XY.gif/revision/latest?cb=20141009063457"
       },
       hp: {
@@ -257,7 +257,7 @@ function buildVars(){
       resistance: [],
       img: {
         default: "http://clipart.toonarific.com/data/media/11/pokemon066.gif",
-        front: "http://graphics.tppcrpg.net/xy/normal/066F.gif",
+        front: "https://graphics.tppcrpg.net/xy/normal/066F.gif",
         back:  "http://pokeunlock.com/wp-content/uploads/2015/01/machop-2.gif"
       },
       hp: {
@@ -447,7 +447,7 @@ function characterChoice(){
         $('.attack-list').addClass('disabled');
 
         // updates the instructions
-        $('.instructions p').text('Choose your enemy');
+        $('.instructions p').text('Choose Your Opponent');
         // setting the health bar value
         $('.stadium .hero progress').val(gameData.hero.hp.current);
 
@@ -546,8 +546,8 @@ function attackEnemy(that, callback){
       // rip opponent
 
       clearModal();
-    $('.modal-in header').append('<h1>You Enemy is slain</h1><span class="close">x</span>');
-    $('.modal-in section').append('<p>Congratulations! Dare you try again?');
+    $('.modal-in header').append('<h1>Your Opponent Lost!</h1><span class="close">x</span>');
+    $('.modal-in section').append('<p>You Win! Try Again.</p>');
     $('.modal-out').slideDown('400');
       modalControls();
 
@@ -636,8 +636,8 @@ function defend(that){
     // here the opponent is dead 
 
     clearModal();
-    $('.modal-in header').append('<h1>Your Hero has died</h1><span class="close">x</span>');
-    $('.modal-in section').append('<p>You lose, good day!');
+    $('.modal-in header').append('<h1>Your Pokemon has die!/h1><span class="close">x</span>');
+    $('.modal-in section').append('<p>You Lost ! Better Next Time!');
     $('.modal-out').slideDown('400');
     modalControls()
 
